@@ -20,6 +20,7 @@ namespace projet_fames
         private void Form1_Load(object sender, EventArgs e)
         {
             btnconnection.Hide();
+            pnlcreation.Hide();
         }
 
         private void btnconnection_Click(object sender, EventArgs e)
@@ -27,6 +28,11 @@ namespace projet_fames
             timer2.Start();
             btnconnection.Hide();
             btncreation.Show();
+           
+           
+            pnlcreation.Show();
+            pnlgauche.Show();
+            pnlcreation.Hide();
         }
 
         private void btncreation_Click(object sender, EventArgs e)
@@ -34,6 +40,10 @@ namespace projet_fames
             timer1.Start();
             btncreation.Hide();
             btnconnection.Show();
+            pnlgauche.Show();
+           
+            pnlcreation.Show();
+            pnlgauche.Hide();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
