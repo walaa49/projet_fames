@@ -19,7 +19,54 @@ namespace projet_fames
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            btnconnection.Hide();
+        }
 
+        private void btnconnection_Click(object sender, EventArgs e)
+        {
+            timer2.Start();
+            btnconnection.Hide();
+            btncreation.Show();
+        }
+
+        private void btncreation_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            btncreation.Hide();
+            btnconnection.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (pnldroite.Location.X>-1)
+            {
+                pnldroite.Location = new Point(pnldroite.Location.X - 10, pnldroite.Location.Y);
+            }
+            else
+            {
+                timer1.Stop();
+                btnconnection.Enabled = true;
+                btncreation.Enabled = true;
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (pnldroite.Location.X < 451)
+            {
+                pnldroite.Location = new Point(pnldroite.Location.X + 10, pnldroite.Location.Y);
+            }
+            else
+            {
+                timer2.Stop();
+                btnconnection.Enabled = true;
+                btncreation.Enabled = true;
+            }
+        }
+
+        private void pnldroite_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }
