@@ -29,7 +29,6 @@ namespace projet_fames
         /// </summary>
         private void InitializeComponent()
         {
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.SuspendLayout();
             // 
             // Form1
@@ -46,8 +45,6 @@ namespace projet_fames
         }
 
         #endregion
-
-        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 
