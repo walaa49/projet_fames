@@ -15,8 +15,20 @@ namespace projet_fames
         public frmlogin()
         {
             InitializeComponent();
+            bunifuFormDock1.SubscribeControlToDragEvents(pnlmenu);
+            bunifuFormDock1.SubscribeControlToDragEvents(tabPage1);
+            bunifuFormDock1.SubscribeControlToDragEvents(tabPage2);
         }
 
-       
+        private void btnidentification_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.SetPage(0);
+        }
+
+        private void btncreeationcompte_Click(object sender, EventArgs e)
+        {
+            bunifuPages1.SetPage(1);
+        }
     }
+   
 }
