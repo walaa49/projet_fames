@@ -16,7 +16,7 @@ namespace projet_fames
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmentrer());
+            Application.Run(new dash());
         }
     }
 }
