@@ -21,6 +21,7 @@ namespace projet_fames
         {
             btnconnection.Hide();
             pnlcreation.Hide();
+      
         }
 
         private void btnconnection_Click(object sender, EventArgs e)
@@ -77,6 +78,70 @@ namespace projet_fames
         private void pnldroite_Paint(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void bunifuTextBox5_TextChange(object sender, EventArgs e)
+        {
+           
+
+            if (bunifuTextBox5.Text != "")
+            {
+                bunifuTextBox5.UseSystemPasswordChar = true;
+            }
+            if (bunifuTextBox5.Text == "")
+            {
+                bunifuTextBox5.UseSystemPasswordChar = false;
+            }
+           
+
+
+
+            
+
+
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (chbmdp.Checked == true)
+            {
+                bunifuTextBox5.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                bunifuTextBox5.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void chbmdp2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbmdp2.Checked == true)
+            {
+                bunifuTextBox2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                bunifuTextBox2.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void bunifuTextBox2_TextChange(object sender, EventArgs e)
+        {
+            if (bunifuTextBox2.Text != "")
+            {
+                bunifuTextBox2.UseSystemPasswordChar = true;
+            }
+            if (bunifuTextBox2.Text == "")
+            {
+                bunifuTextBox2.UseSystemPasswordChar = false;
+            }
         }
     }
 }
