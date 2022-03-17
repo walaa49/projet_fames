@@ -58,6 +58,30 @@ namespace projet_fames
                 txtmdp.UseSystemPasswordChar = false;
             }
         }
+
+        private void chbmdp2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbmdp2.Checked == true)
+            {
+                txtmdp2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtmdp2.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtmdp2_TextChanged(object sender, EventArgs e)
+        {
+            if (txtmdp2.Text != "")
+            {
+                txtmdp2.UseSystemPasswordChar = true;
+            }
+            if (txtmdp2.Text == "")
+            {
+                txtmdp2.UseSystemPasswordChar = false;
+            }
+        }
     }
    
 }

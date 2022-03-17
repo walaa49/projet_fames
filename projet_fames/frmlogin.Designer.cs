@@ -73,6 +73,7 @@ namespace projet_fames
             this.btncreation = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lbltitre2 = new System.Windows.Forms.Label();
             this.chbmdp = new System.Windows.Forms.CheckBox();
+            this.chbmdp2 = new System.Windows.Forms.CheckBox();
             this.pnlmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piclogo)).BeginInit();
             this.bunifuPages1.SuspendLayout();
@@ -185,7 +186,7 @@ namespace projet_fames
             // piclogo
             // 
             this.piclogo.Image = global::projet_fames.Properties.Resources.logofrv;
-            this.piclogo.Location = new System.Drawing.Point(71, 71);
+            this.piclogo.Location = new System.Drawing.Point(71, 64);
             this.piclogo.Name = "piclogo";
             this.piclogo.Size = new System.Drawing.Size(175, 137);
             this.piclogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -331,10 +332,10 @@ namespace projet_fames
             this.bunifuPages1.Location = new System.Drawing.Point(306, 12);
             this.bunifuPages1.Multiline = true;
             this.bunifuPages1.Name = "bunifuPages1";
-            this.bunifuPages1.Page = this.tabPage1;
-            this.bunifuPages1.PageIndex = 0;
-            this.bunifuPages1.PageName = "tabPage1";
-            this.bunifuPages1.PageTitle = "IDENTIFICATION";
+            this.bunifuPages1.Page = this.tabPage2;
+            this.bunifuPages1.PageIndex = 1;
+            this.bunifuPages1.PageName = "tabPage2";
+            this.bunifuPages1.PageTitle = "CREATION";
             this.bunifuPages1.SelectedIndex = 0;
             this.bunifuPages1.Size = new System.Drawing.Size(617, 417);
             this.bunifuPages1.TabIndex = 1;
@@ -628,6 +629,7 @@ namespace projet_fames
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.chbmdp2);
             this.tabPage2.Controls.Add(this.txtmdp2);
             this.tabPage2.Controls.Add(this.txtemail);
             this.tabPage2.Controls.Add(this.txtnom2);
@@ -715,6 +717,7 @@ namespace projet_fames
             this.txtmdp2.TextPlaceholder = "MOT DE PASSE";
             this.txtmdp2.UseSystemPasswordChar = false;
             this.txtmdp2.WordWrap = true;
+            this.txtmdp2.TextChanged += new System.EventHandler(this.txtmdp2_TextChanged);
             // 
             // txtemail
             // 
@@ -981,6 +984,19 @@ namespace projet_fames
             this.chbmdp.UseVisualStyleBackColor = true;
             this.chbmdp.CheckedChanged += new System.EventHandler(this.chbmdp_CheckedChanged);
             // 
+            // chbmdp2
+            // 
+            this.chbmdp2.AutoSize = true;
+            this.chbmdp2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbmdp2.ForeColor = System.Drawing.Color.Firebrick;
+            this.chbmdp2.Location = new System.Drawing.Point(287, 292);
+            this.chbmdp2.Name = "chbmdp2";
+            this.chbmdp2.Size = new System.Drawing.Size(295, 29);
+            this.chbmdp2.TabIndex = 13;
+            this.chbmdp2.Text = "AFFICHER LE MOT DE PASSE";
+            this.chbmdp2.UseVisualStyleBackColor = true;
+            this.chbmdp2.CheckedChanged += new System.EventHandler(this.chbmdp2_CheckedChanged);
+            // 
             // frmlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1024,5 +1040,6 @@ namespace projet_fames
         private Bunifu.UI.WinForms.BunifuTextBox txtemail;
         private Bunifu.UI.WinForms.BunifuTextBox txtnom2;
         private System.Windows.Forms.CheckBox chbmdp;
+        private System.Windows.Forms.CheckBox chbmdp2;
     }
 }
