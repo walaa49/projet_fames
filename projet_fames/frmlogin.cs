@@ -29,6 +29,35 @@ namespace projet_fames
         {
             bunifuPages1.SetPage(1);
         }
+
+        private void chbmdp_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbmdp.Checked == true)
+            {
+                txtmdp.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtmdp.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void frmlogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtmdp_TextChange(object sender, EventArgs e)
+        {
+            if (txtmdp.Text!="")
+            {
+                txtmdp.UseSystemPasswordChar = true;
+            }
+            if (txtmdp.Text=="")
+            {
+                txtmdp.UseSystemPasswordChar = false;
+            }
+        }
     }
    
 }
