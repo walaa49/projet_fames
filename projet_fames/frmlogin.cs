@@ -70,7 +70,6 @@ namespace projet_fames
                 txtmdp2.UseSystemPasswordChar = true;
             }
         }
-
         private void txtmdp2_TextChanged(object sender, EventArgs e)
         {
             if (txtmdp2.Text != "")
